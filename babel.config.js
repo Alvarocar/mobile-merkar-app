@@ -12,6 +12,8 @@ module.exports = function(api) {
           '@routes': './src/routes',
           '@utils': './src/utils',
           '@types': './src/types',
+          '@slice': './src/slice',
+          '@styles': './src/styles',
         },
         "extensions": [
           ".js",
