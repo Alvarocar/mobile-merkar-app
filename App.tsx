@@ -1,8 +1,12 @@
 import Router from "@routes/components/router";
+import { store } from "@src/store";
+import { Provider } from "react-redux";
 
 export default function App() {
   return (
-    <Router />
+    <Provider store={store}>
+      <Router />
+    </Provider>
   );
 }
 
