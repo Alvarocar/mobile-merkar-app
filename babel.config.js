@@ -11,7 +11,7 @@ module.exports = function(api) {
           '@scenes': './src/scenes',
           '@routes': './src/routes',
           '@utils': './src/utils',
-          '@types': './src/types',
+          '@type': './src/type',
           '@slice': './src/slice',
           '@stylesheet': './src/stylesheet',
         },

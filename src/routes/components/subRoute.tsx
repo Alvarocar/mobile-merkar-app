@@ -1,4 +1,4 @@
-import { Route } from "@routes/routes.schema"
+import { Route } from "@type/router"
 import EmptyComponent from "@utils/components/emptyComponent"
 import withProps from "@utils/hoc/withProps"
 import { isNull, isUndefined } from "lodash"
