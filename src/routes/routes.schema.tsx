@@ -8,7 +8,7 @@ import MatIcon from "react-native-vector-icons/MaterialIcons"
 import AntIcon from "react-native-vector-icons/AntDesign"
 import EntyIcon from 'react-native-vector-icons/Entypo'
 import { tabButtonIcon } from "@utils/components/icons/tabButtonIcon"
-import { _screenTab, _tabMain } from "@styles/navs"
+import { _screenTab, _tabMain } from "@stylesheet/navs"
 
 export interface ROUTES_SCHEMA_TYPE {
   stack: {
@@ -27,8 +27,6 @@ export interface ROUTES_SCHEMA_TYPE {
   }
 }
 
-console.table(_tabMain)
-
 export interface Route {
   name: string
   component: React.FC | null,
@@ -36,9 +34,6 @@ export interface Route {
   middlewares?: HOC[],
   screenProps?: object,
 }
-
-const tabBarIconSty = { focusColor: "#E0B678", size: 35 }
-const tabBarLabelSty = { focusColor: "#E0B678", size: 15 }
 
 export const ROUTES_SCHEMA: ROUTES_SCHEMA_TYPE = {
   stack: createNativeStackNavigator(),

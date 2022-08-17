@@ -13,7 +13,7 @@ module.exports = function(api) {
           '@utils': './src/utils',
           '@types': './src/types',
           '@slice': './src/slice',
-          '@styles': './src/styles',
+          '@stylesheet': './src/stylesheet',
         },
         "extensions": [
           ".js",
