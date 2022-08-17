@@ -1,10 +1,10 @@
-import { colors, padding } from "@stylesheet/_global.styles";
+import { colors, footer, padding } from "@src/styles/_global.styles";
 import { StyleSheet } from "react-native";
 
 export const _tabMain = StyleSheet.create({
   container: {
     backgroundColor: colors.secondary,
-    minHeight: 60,
+    minHeight: footer.height,
   },
 })
 

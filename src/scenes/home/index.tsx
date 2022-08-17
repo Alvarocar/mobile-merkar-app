@@ -1,10 +1,17 @@
-import { Text, View } from "react-native";
+import CardEmpty from "@src/components/cards/cardEmpty";
+import { screenContainer } from "@src/styles/_global.styles";
+import { SafeAreaView } from "react-native";
+import MainHeader from "./children/mainHeader";
 
 const HomeScreen: React.FC = () => {
   return (
-    <View>
-      <Text>HomeScreen</Text>
-    </View>
+    <SafeAreaView
+      style={screenContainer}
+    >
+      <CardEmpty
+        header={<MainHeader />}
+      />
+    </SafeAreaView>
   )
 }
 

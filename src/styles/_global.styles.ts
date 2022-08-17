@@ -1,3 +1,4 @@
+import React from 'react'
 import { Dimensions } from 'react-native'
 
 export const dimensions = {
@@ -29,4 +30,20 @@ export const fonts = {
   md: 18,
   lg: 28,
   primary: 'Roboto'
+}
+
+export const borderRadius = {
+  sm: 10,
+  md: 20,
+  lg: 50,
+}
+
+export const footer = {
+  height: 60,
+}
+
+export const screenContainer: React.CSSProperties = {
+  backgroundColor: colors.secondary,
+  width: dimensions.fullWidth,
+  height: dimensions.fullHeight,
 }

@@ -3,14 +3,8 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
+      "@src/*" : ["./src/*"],
       "@assets/*": ["./assets/*"],
-      "@scenes/*": ["./src/scenes/*"],
-      "@routes/*": ["./src/routes/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@type/*": ["./src/type/*"],
-      "@slice/*": ["./src/slice/*"],
-      "@stylesheet/*": ["./src/stylesheet/*"],
-      "@src/*" : ["./src/*"]
     }
   }
 }

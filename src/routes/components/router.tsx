@@ -1,6 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native"
-import { ROUTES_SCHEMA } from "@routes/routes.schema"
-import withProps from "@utils/hoc/withProps"
+import { ROUTES_SCHEMA } from "@src/routes/routes.schema"
+import withProps from "@src/utils/hoc/withProps"
 import SubRoute from "./subRoute"
 
 const Router = () => {

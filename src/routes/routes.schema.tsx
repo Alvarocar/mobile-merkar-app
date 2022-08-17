@@ -1,14 +1,14 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import HomeScreen from "@scenes/home"
-import NFCScreen from "@scenes/nfc"
+import HomeScreen from "@src/scenes/home"
+import NFCScreen from "@src/scenes/nfc"
 import MatComIcon from "react-native-vector-icons/MaterialCommunityIcons"
 import MatIcon from "react-native-vector-icons/MaterialIcons"
 import AntIcon from "react-native-vector-icons/AntDesign"
 import EntyIcon from 'react-native-vector-icons/Entypo'
-import { tabButtonIcon } from "@utils/components/icons/tabButtonIcon"
-import { _screenTab, _tabMain } from "@stylesheet/navs"
-import { ROUTES_SCHEMA_TYPE } from "@type/router"
+import { tabButtonIcon } from "@src/utils/components/icons/tabButtonIcon"
+import { _screenTab, _tabMain } from "@src/styles/navs"
+import { ROUTES_SCHEMA_TYPE } from "@src/types/router"
 
 export const ROUTES_SCHEMA: ROUTES_SCHEMA_TYPE = {
   stack: createNativeStackNavigator(),
@@ -26,7 +26,9 @@ export const ROUTES_SCHEMA: ROUTES_SCHEMA_TYPE = {
           initialRouteName: 'Home',
           screenOptions: {
             tabBarStyle: _tabMain.container,
-          }
+            headerShown: false,
+          },
+
         },
         routes: [
           {

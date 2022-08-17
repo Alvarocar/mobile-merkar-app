@@ -8,12 +8,6 @@ module.exports = function(api) {
         'alias': {
           '@src': './src',
           '@assets': './assets',
-          '@scenes': './src/scenes',
-          '@routes': './src/routes',
-          '@utils': './src/utils',
-          '@type': './src/type',
-          '@slice': './src/slice',
-          '@stylesheet': './src/stylesheet',
         },
         "extensions": [
           ".js",
@@ -21,7 +15,8 @@ module.exports = function(api) {
           ".ts",
           ".tsx",
         ]
-      }]
+      }],
+      ["inline-react-svg"],
     ]
   };
 };
