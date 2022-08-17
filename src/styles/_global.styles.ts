@@ -6,9 +6,15 @@ export const dimensions = {
 }
   
 export const colors  = {
-  primary: '#226B74',
-  secondary: '#254B5A',
-  tertiary: '#5DA6A7'
+  primary: '#E0B678',
+  secondary: '#176368',
+  tertiary: '#991E69',
+  white: '#FFFFFF',
+  red: '#C11919',
+  blue: '#1166AA',
+  grey: '#969696',
+  black: '#212121',
+
 }
 
 export const padding = {

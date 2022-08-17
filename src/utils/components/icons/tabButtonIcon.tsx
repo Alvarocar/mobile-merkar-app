@@ -1,25 +1,30 @@
+import { useMemo } from "react"
+
 interface TabButtonIconProps {
-  focused?: boolean,
-  focusColor?: string,
-  color?: string,
   name: string,
-  size?: number
+  selected?: React.CSSProperties,
+  style?: React.CSSProperties,
+}
+
+interface withTabButtonIconProps {
+  focused: boolean,
 }
 
 export const tabButtonIcon = ({
-  focusColor = 'blue',
   name,
-  size = 12
+  style = {},
+  selected = {},
 }: TabButtonIconProps) => {
   return (WrapperComponent: any) => {
-    const withTabButtonIcon: React.FC<TabButtonIconProps> = ({ focused, color, ...rest }) => (
-      <WrapperComponent
-        color={focused ? focusColor : color}
-        {...rest}
-        size={size}
-        name={name}
-      />
-    )
+    const withTabButtonIcon: React.FC<withTabButtonIconProps> = ({ focused }) => {
+      const finalStyle = useMemo(() => focused ? { ...style, ...selected } : style, [style, selected])
+      return (
+        <WrapperComponent
+          {...finalStyle}
+          name={name}
+        />
+      )
+    }
     return withTabButtonIcon
   }
 }

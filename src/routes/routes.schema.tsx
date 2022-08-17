@@ -8,6 +8,7 @@ import MatIcon from "react-native-vector-icons/MaterialIcons"
 import AntIcon from "react-native-vector-icons/AntDesign"
 import EntyIcon from 'react-native-vector-icons/Entypo'
 import { tabButtonIcon } from "@utils/components/icons/tabButtonIcon"
+import { _screenTab, _tabMain } from "@styles/navs"
 
 export interface ROUTES_SCHEMA_TYPE {
   stack: {
@@ -19,9 +20,14 @@ export interface ROUTES_SCHEMA_TYPE {
   navProps: {
     initialRouteName?: string,
     options?: object,
-    screenOptions?: object,
+    screenOptions?: {
+      headerShown?: boolean,
+      tabBarStyle?: object,
+    },
   }
 }
+
+console.table(_tabMain)
 
 export interface Route {
   name: string
@@ -48,6 +54,9 @@ export const ROUTES_SCHEMA: ROUTES_SCHEMA_TYPE = {
         stack: createBottomTabNavigator(),
         navProps: {
           initialRouteName: 'Home',
+          screenOptions: {
+            tabBarStyle: _tabMain.container,
+          }
         },
         routes: [
           {
@@ -55,9 +64,17 @@ export const ROUTES_SCHEMA: ROUTES_SCHEMA_TYPE = {
             component: HomeScreen,
             screenProps: {
               tabBarLabel:
-                tabButtonIcon({ name: 'dot-single', ...tabBarLabelSty })(EntyIcon),
+                tabButtonIcon({
+                  name: 'dot-single',
+                  style: _screenTab.labelScreen,
+                  selected: _screenTab.screenSelected
+                })(EntyIcon),
               tabBarIcon:
-                tabButtonIcon({ name: 'home', ...tabBarIconSty })(AntIcon)
+                tabButtonIcon({
+                  name: 'home',
+                  style: _screenTab.iconScreen,
+                  selected: _screenTab.screenSelected
+                })(AntIcon)
             }
           },
           {
@@ -65,9 +82,17 @@ export const ROUTES_SCHEMA: ROUTES_SCHEMA_TYPE = {
             component: HomeScreen,
             screenProps: {
               tabBarLabel:
-                tabButtonIcon({ name: 'dot-single', ...tabBarLabelSty })(EntyIcon),
+                tabButtonIcon({
+                  name: 'dot-single',
+                  style: _screenTab.labelScreen,
+                  selected: _screenTab.screenSelected
+                })(EntyIcon),
               tabBarIcon:
-                tabButtonIcon({ name: 'timelapse', ...tabBarIconSty })(MatComIcon),
+                tabButtonIcon({
+                  name: 'timelapse',
+                  style: _screenTab.iconScreen,
+                  selected: _screenTab.screenSelected
+                })(MatComIcon),
             }
           },
           {
@@ -75,9 +100,17 @@ export const ROUTES_SCHEMA: ROUTES_SCHEMA_TYPE = {
             component: HomeScreen,
             screenProps: {
               tabBarLabel:
-                tabButtonIcon({ name: 'dot-single', ...tabBarLabelSty })(EntyIcon),
+                tabButtonIcon({
+                  name: 'dot-single',
+                  style: _screenTab.labelScreen,
+                  selected: _screenTab.screenSelected
+                })(EntyIcon),
               tabBarIcon:
-                tabButtonIcon({ name: 'storefront', ...tabBarIconSty })(MatIcon),
+                tabButtonIcon({
+                  name: 'storefront',
+                  style: _screenTab.iconScreen,
+                  selected: _screenTab.screenSelected
+                })(MatIcon),
             }
           },
         ]
