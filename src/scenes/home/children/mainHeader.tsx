@@ -1,6 +1,6 @@
 import { _mainHeaderStyles } from "@src/styles/scenes/_home";
 import { View } from "react-native";
-import LogoMerkar from "../../../assets/LogoMerkar.svg";
+import LogoMerkar from "../../../assets/LogoMerkar";
 
 const MainHeader = () => (
   <View
