@@ -17,7 +17,7 @@ export const tabButtonIcon = ({
 }: TabButtonIconProps) => {
   return (WrapperComponent: any) => {
     const withTabButtonIcon: React.FC<withTabButtonIconProps> = ({ focused }) => {
-      const finalStyle = useMemo(() => focused ? { ...style, ...selected } : style, [style, selected])
+      const finalStyle = useMemo(() => focused ? { ...style, ...selected } : style, [style, selected, focused])
       return (
         <WrapperComponent
           {...finalStyle}
