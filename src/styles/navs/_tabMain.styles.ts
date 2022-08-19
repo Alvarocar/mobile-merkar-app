@@ -1,24 +1,25 @@
-import { colors, footer, padding } from "@src/styles/_global.styles";
+import { _colors, _footer, _padding } from "@src/styles/_global.styles";
 import { StyleSheet } from "react-native";
-import { color } from "react-native-reanimated";
 
 export const _tabMain = StyleSheet.create({
   container: {
-    backgroundColor: colors.secondary,
-    minHeight: footer.height,
+    backgroundColor: _colors.secondary,
+    height: _footer.height,
+    borderTopWidth: 0,
+    elevation: 0,
   },
 })
 
 export const _screenTab = StyleSheet.flatten({
   iconScreen: {
-    color: colors.white,
+    color: _colors.white,
     size: 35,
   },
   labelScreen: {
-    color: colors.secondary,
+    color: _colors.secondary,
     size: 15,
   },
   screenSelected: {
-    color: colors.primary,
+    color: _colors.primary,
   }
 })

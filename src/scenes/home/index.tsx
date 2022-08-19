@@ -1,17 +1,20 @@
-import CardEmpty from "@src/components/cards/cardEmpty";
-import { screenContainer } from "@src/styles/_global.styles";
-import { SafeAreaView } from "react-native";
+import CardScene from "@src/components/cards/cardScene";
+import { _screenContainer } from "@src/styles/_global.styles";
+import { Layout } from "@ui-kitten/components";
 import MainHeader from "./children/mainHeader";
+import NfcImage from "./children/nfc";
 
 const HomeScreen: React.FC = () => {
   return (
-    <SafeAreaView
-      style={screenContainer}
+    <Layout
+      style={_screenContainer}
     >
-      <CardEmpty
+      <CardScene
         header={<MainHeader />}
-      />
-    </SafeAreaView>
+      >
+        <NfcImage />
+      </CardScene>
+    </Layout>
   )
 }
 

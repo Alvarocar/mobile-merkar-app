@@ -1,15 +1,16 @@
 import { _mainHeaderStyles } from "@src/styles/scenes/_home";
-import { View } from "react-native";
+import { Layout } from "@ui-kitten/components";
 import LogoMerkar from "../../../assets/LogoMerkar";
 
 const MainHeader = () => (
-  <View
+  <Layout
     style={_mainHeaderStyles.container}
   >
     <LogoMerkar
       width={250}
+      style={_mainHeaderStyles.logo}
     />
-  </View>
+  </Layout>
 )
 
 export default MainHeader
