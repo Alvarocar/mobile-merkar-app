@@ -10,8 +10,8 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "@ant-design/react-native": "^5.0.0",
     "@react-native-community/masked-view": "^0.1.11",
+    "@react-native-material/core": "^1.3.7",
     "@react-navigation/bottom-tabs": "^6.3.2",
     "@react-navigation/native": "^6.0.11",
     "@react-navigation/native-stack": "^6.7.0",
@@ -41,7 +41,7 @@
     "babel-plugin-import": "^1.13.5",
     "babel-plugin-inline-react-svg": "^2.0.1",
     "react-native-svg-transformer": "^1.0.0",
-    "typescript": "~4.3.5"
+    "typescript": "^3.8.3"
   },
   "private": true
 }

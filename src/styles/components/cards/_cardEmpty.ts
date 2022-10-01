@@ -1,7 +1,7 @@
-import { borderRadius, colors, dimensions, footer } from "@src/styles/_global.styles";
+import { _borderRadius, _colors, dimensions, _footer } from "@src/styles/_global.styles";
 import { StyleSheet } from "react-native";
 
-const containerHeight = dimensions.fullHeight - footer.height - 10
+const containerHeight = dimensions.fullHeight - _footer.height - 10
 const headerHeight = 150
 
 export const cardEmptyStyles = StyleSheet.create({
@@ -13,17 +13,17 @@ export const cardEmptyStyles = StyleSheet.create({
     minHeight: containerHeight,
   },
   header: {
-    backgroundColor: colors.primary,
+    backgroundColor: _colors.primary,
     width: '100%',
     height: headerHeight,
-    borderTopStartRadius: borderRadius.md,
-    borderTopEndRadius: borderRadius.md,
+    borderTopStartRadius: _borderRadius.md,
+    borderTopEndRadius: _borderRadius.md,
   },
   body: {
-    backgroundColor: colors.white,
+    backgroundColor: _colors.white,
     width: '100%',
     height: (containerHeight - headerHeight),
-    borderBottomStartRadius: borderRadius.md,
-    borderBottomEndRadius: borderRadius.md,
+    borderBottomStartRadius: _borderRadius.md,
+    borderBottomEndRadius: _borderRadius.md,
   },
 })

@@ -1,16 +1,20 @@
 import CardEmpty from "@src/components/cards/cardEmpty";
-import { screenContainer } from "@src/styles/_global.styles";
+import CardScreen from "@src/components/cards/cardScreen";
+import { _screenContainer } from "@src/styles/_global.styles";
 import { SafeAreaView } from "react-native";
 import MainHeader from "./children/mainHeader";
+import NfcBody from "./children/nfcBody";
 
 const HomeScreen: React.FC = () => {
   return (
     <SafeAreaView
-      style={screenContainer}
+      style={_screenContainer}
     >
-      <CardEmpty
+      <CardScreen
         header={<MainHeader />}
-      />
+      >
+        <NfcBody />
+      </CardScreen>
     </SafeAreaView>
   )
 }
